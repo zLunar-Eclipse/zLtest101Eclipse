@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSIS SMA Negeri 3 Surakarta | Beranda</title>
+    <title>ADMINISTRATOR SMAGA | Official Website</title>
     <style>
-        /* Reset & Base Styles */
-        * {
+        {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: #0f172a;
+            color: #f1f5f9;
             line-height: 1.6;
         }
         .container {
@@ -23,10 +22,11 @@
             max-width: 1200px;
         }
 
-        /* Navbar */
+        /* navibarbluenavygayah */
         header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -35,272 +35,241 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
         }
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-        .logo-placeholder {
-            width: 40px;
-            height: 40px;
-            background-color: #0d6efd;
-            border-radius: 50%;
+            gap: 12px;
         }
         .logo-text {
-            font-weight: bold;
-            color: #1a1a1a;
-            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #38bdf8;
+            font-size: 1.3rem;
         }
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 25px;
         }
         .nav-links a {
             text-decoration: none;
-            color: #555;
+            color: #94a3b8;
             font-weight: 500;
             transition: color 0.3s;
         }
         .nav-links a:hover {
-            color: #0d6efd;
+            color: #38bdf8;
         }
 
-        /* Hero Section */
+        /*Hero Sect*/
         .hero {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #fff;
-            padding: 80px 0;
+            padding: 100px 0 80px 0;
             text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
         }
-        .hero-content h1 {
-            font-size: 3rem;
+        .hashtag {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
             margin-bottom: 20px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
         }
-        .hero-content p {
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-        }
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+            max-width: 750px;
+            margin: 0 auto 35px auto;
+            color: #94a3b8;
         }
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            border-radius: 5px;
+            padding: 12px 28px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: all 0.3s ease;
         }
-        .btn:hover {
+        .btn-instagram {
+            background-color: #38bdf8;
+            color: #0f172a;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+        }
+        .btn-instagram:hover {
+            background-color: #0ea5e9;
             transform: translateY(-2px);
         }
-        .btn-primary {
-            background-color: #fff;
-            color: #1e3c72;
-        }
-        .btn-outline {
-            border: 2px solid #fff;
-            color: #fff;
-        }
 
-        /* Stats Section */
-        .stats {
-            background-color: #fff;
-            padding: 40px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
-        }
-        .stats-grid {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: #0d6efd;
-            margin-bottom: 5px;
-        }
-        .stat-item p {
-            color: #666;
-            font-weight: 500;
-        }
-
-        /* Quote & Ketua Section */
-        .ketua-section {
+        /*div sect*/
+        .divisions-section {
             padding: 60px 0;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
         }
-        .ketua-grid {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .ketua-img {
-            flex: 1;
-            min-width: 280px;
+        .section-title {
             text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            font-weight: 700;
         }
-        .ketua-img img {
-            width: 100%;
-            max-width: 320px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
-        .ketua-info {
-            flex: 2;
-            min-width: 300px;
+        .div-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            padding: 30px;
+            border-radius: 12px;
+            transition: transform 0.3s, border-color 0.3s;
         }
-        .quote {
-            font-style: italic;
+        .div-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .div-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .div-card h3 {
             font-size: 1.4rem;
-            color: #444;
-            margin-bottom: 20px;
-            line-height: 1.4;
-            border-left: 4px solid #0d6efd;
-            padding-left: 15px;
+            margin-bottom: 12px;
+            color: #fff;
         }
-        .ketua-info h4 {
-            font-size: 1.5rem;
-            color: #1a1a1a;
-        }
-        .ketua-info p {
-            color: #666;
-            font-weight: 500;
+        .div-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
         }
 
-        /* Footer */
+        /* footer setts atau apalah menurut yutub */
         footer {
-            background-color: #1a1a1a;
-            color: #fff;
+            background-color: #020617;
+            border-top: 1px solid #1e293b;
             padding: 40px 0 20px 0;
-            margin-top: 50px;
+            margin-top: 80px;
         }
-        .footer-grid {
+        .footer-content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 20px;
+            padding-bottom: 20px;
         }
-        .footer-about h3 {
-            margin-bottom: 15px;
-        }
-        .footer-links ul {
-            list-style: none;
-        }
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-        }
-        .footer-links a:hover {
+        .footer-brand h3 {
             color: #fff;
+            margin-bottom: 5px;
+        }
+        .footer-brand p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        .footer-social a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .footer-social a:hover {
+            color: #38bdf8;
         }
         .copyright {
             text-align: center;
-            border-top: 1px solid #333;
+            border-top: 1px solid #1e293b;
             padding-top: 20px;
-            color: #777;
-            font-size: 0.9rem;
+            color: #475569;
+            font-size: 0.85rem;
         }
 
-        /* Responsive Breakpoints */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* Sederhana untuk mobile */
-            .hero-content h1 { font-size: 2rem; }
-            .ketua-grid { flex-direction: column; text-align: center; gap: 30px; }
-            .quote { border-left: none; padding-left: 0; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.3rem; }
+            .footer-content { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigasi -->
+    <!-- Navigasi -->
     <header>
         <div class="container">
             <nav>
                 <div class="logo-area">
-                    <div class="logo-placeholder"></div>
-                    <div class="logo-text">OSIS SMAGA</div>
+                    <div class="logo-text">ADMINSMAGA</div>
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang</a></li>
-                    <li><a href="#">Profil</a></li>
-                    <li><a href="#">Proker</a></li>
-                    <li><a href="#">Berita</a></li>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#divisi">Divisi</a></li>
+                    <li><a href="https://www.instagram.com/adminsmaga/" target="_blank">Instagram</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <h1>OSIS SMAGA</h1>
-                <p>Wadah aspirasi dan kreasi siswa SMA Negeri 3 Surakarta. Mewujudkan generasi yang berkarakter, inovatif, dan berdaya saing global.</p>
-                <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Tentang Kami</a>
-                    <a href="#" class="btn btn-outline">Kegiatan Terbaru</a>
-                </div>
-            </div>
+            <span class="hashtag">#AdminWANI</span>
+            <h1>ADMINISTRATOR SMAGA</h1>
+            <p>Organisasi Teknologi Informasi dan Komunikasi resmi SMA Negeri 3 Surakarta yang mengelola portal digital, jurnalistik, serta media kreatif sekolah.</p>
+            <a href="https://www.instagram.com/adminsmaga/" target="_blank" class="btn btn-instagram">Kunjungi Instagram Kami</a>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
+    <!-- Divisi Section -->
+    <section class="container id="divisi"">
+        <div class="divisions-section">
+            <h2 class="section-title">Bidang Divisi Kami</h2>
+            <div class="divisions-grid">
+                <!--div 1-->
+                <div class="div-card">
+                    <span class="div-icon">✍️</span>
+                    <h3>Jurnalistik</h3>
+                    <p>Fokus pada peliputan berita sekolah, dokumentasi acara, fotografi, videografi, serta penyusunan artikel informatif seputar kegiatan civitas akademika SMAN 3 Surakarta.</p>
+                </div>
+                <!-- div2 -->
+                <div class="div-card">
+                    <span class="div-icon">💻</span>
+                    <h3>Programming</h3>
+                    <p>Mengembangkan serta mengelola website resmi, sistem informasi internal sekolah, dan mengeksplorasi logika coding serta pemecahan masalah berbasis teknologi digital.</p>
+                </div>
+                
+                <div class="div-card">
+                    <span class="div-icon">🎨</span>
+                    <h3>Desain Grafis</h3>
+                    <p>Merancang identitas visual kreatif, layout majalah/buletin, poster digital, serta kebutuhan aset visual media sosial untuk menjaga estetika branding sekolah tetap modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- kaki oawkokwa -->
+    <footer>
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>26</h3>
-                    <p>Pengurus Aktif</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>ADMINISTRATOR SMAGA</h3>
+                    <p>SMA Negeri 3 Surakarta · Widya Karma Jaya</p>
                 </div>
-                <div class="stat-item">
-                    <h3>9</h3>
-                    <p>Program Kerja</p>
-                </div>
-                <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Dedikasi</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/adminsmaga/" target="_blank">@adminsmaga</a>
                 </div>
             </div>
+            <div class="copyright">
+                &copy; 2026 Administrator SMAN 3 Surakarta. All Rights Reserved.
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Sambutan Ketua Section -->
-    <section class="container">
-        <div class="ketua-section">
-            <div class="container">
-                <div class="ketua-grid">
-                    <div class="ketua-img">
-                        <!-- Placeholder Gambar Menggunakan Picsum -->
-                        <img src="https://picsum.photos" alt="Ketua OSIS">
-                    </div>
-                    <div class="ketua-info">
-                        <div class="quote">"Wewok Detok>!!>>!"</div>
-                        <h4>userholder</h4>
-                        <p>something </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-                    /*anu footer sini*/
 </body>
 </html>
