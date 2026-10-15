@@ -102,6 +102,12 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
         .btn-instagram,
         .btn-youtube,
         .btn-facebook {
@@ -131,16 +137,26 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
+
+        /*menurutt simbah Gemini, */
         .div-card {
+            display: block;
             background-color: #1e293b;
             border: 1px solid #334155;
             padding: 30px;
             border-radius: 12px;
+            color: inherit;
+            text-decoration: none;
             transition: transform 0.3s, border-color 0.3s;
         }
-        .div-card:hover {
+        .div-card:hover,
+        .div-card:focus-visible {
             transform: translateY(-5px);
             border-color: #38bdf8;
+        }
+        .div-card:focus-visible {
+            outline: 2px solid #38bdf8;
+            outline-offset: 3px;
         }
         .div-icon {
             font-size: 2rem;
@@ -200,6 +216,15 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2.3rem; }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+            }
+            .hero-actions .btn {
+                width: min(100%, 320px);
+                text-align: center;
+            }
             .footer-content { flex-direction: column; text-align: center; }
         }
     </style>
@@ -226,10 +251,12 @@
         <div class="container">
             <span class="hashtag">#AdminMBG</span>
             <h1>ADMINISTRATOR SMAGA</h1>
-            <p>Organisasi Teknologi Informasi dan Komunikasi resmi SMA Negeri 3 Surakarta yang mengelola portal digital, jurnalistik, serta media kreatif sekolah.</p>
-            <a href="https://www.instagram.com/adminsmaga/" target="_blank" class="btn btn-instagram">Kunjungi Instagram Admin</a>
-            <a href="https://www.facebook.com/p/Administrator-Smaga-100063067727322/" target="_blank" class="btn btn-facebook">Kunjungi Facebook Admin</a>
-            <a href="https://youtube.com/@administratorsmaga3364?si=0BDfOEh_OyTd3XZL/" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">Kunjungi YouTube Admin</a>
+            <p>Organisasi Teknologi Informasi & Komunikasi resmi SMA Negeri 3 Surakarta yang mengelola portal digital, jurnalistik, serta media kreatif sekolah.</p>
+            <div class="hero-actions">
+                <a href="https://www.instagram.com/adminsmaga/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">Kunjungi Instagram Admin</a>
+                <a href="https://www.facebook.com/p/Administrator-Smaga-100063067727322/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">Kunjungi Facebook Admin</a>
+                <a href="https://youtube.com/@administratorsmaga3364?si=0BDfOEh_OyTd3XZL/" target="_blank" rel="noopener noreferrer" class="btn btn-youtube">Kunjungi YouTube Admin</a>
+            </div>
         </div>
     </section>
 
@@ -239,23 +266,23 @@
             <h2 class="section-title">Bidang Divisi Kami</h2>
             <div class="divisions-grid">
                 <!--div 1-->
-                <div class="div-card">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Jurnalistik, ganti HTTPS HOLDER dengan tautan tujuan">
                     <span class="div-icon">🔥✍️</span>
                     <h3>Jurnalistik</h3>
                     <p>Fokus pada peliputan berita sekolah, dokumentasi acara, fotografi, videografi, serta penyusunan artikel informatif seputar kegiatan civitas akademika SMAN 3 Surakarta.</p>
-                </div>
+                </a>
                 <!-- div2 -->
-                <div class="div-card">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Programming, ganti HTTPS HOLDER dengan tautan tujuan">
                     <span class="div-icon">💻💥</span>
                     <h3>Programming</h3>
                     <p>Mengembangkan serta mengelola website resmi, sistem informasi internal sekolah, dan mengeksplorasi logika coding serta pemecahan masalah berbasis teknologi digital.</p>
-                </div>
+                </a>
                 
-                <div class="div-card">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Desain Grafis, ganti HTTPS HOLDER dengan tautan tujuan">
                     <span class="div-icon">🎨🖌️</span>
                     <h3>Desain Grafis</h3>
                     <p>Merancang identitas visual kreatif, layout majalah/buletin, poster digital, serta kebutuhan aset visual media sosial untuk menjaga estetika branding sekolah tetap modern.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
