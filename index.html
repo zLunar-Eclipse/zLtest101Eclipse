@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMINISTRATOR SMAGA | Official Website</title>
     <style>
-        {
+        * /*wola sikampret *nya diilangin*/{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -15,11 +15,11 @@
             background-color: #0f172a;
             color: #f1f5f9;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         .container {
-            width: 85%;
+            width: min(92%, 1200px);
             margin: 0 auto;
-            max-width: 1200px;
         }
 
         /* navibarbluenavygayah */
@@ -42,11 +42,12 @@
             align-items: center;
             gap: 12px;
         }
-        .logo-text {
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: #38bdf8;
-            font-size: 1.3rem;
+        .logo-image {
+            display: block;
+            width: auto;
+            height: 44px;
+            max-width: 180px;
+            object-fit: contain;
         }
         .nav-links {
             display: flex;
@@ -65,7 +66,7 @@
 
         /*Hero Sect*/
         .hero {
-            padding: 100px 0 80px 0;
+            padding: 80px 0 64px;
             text-align: center;
             background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
         }
@@ -82,6 +83,7 @@
         }
         .hero h1 {
             font-size: 3.5rem;
+            line-height: 1.1;
             font-weight: 800;
             margin-bottom: 20px;
             background: linear-gradient(to right, #fff, #94a3b8);
@@ -90,6 +92,7 @@
         }
         .hero p {
             font-size: 1.2rem;
+            line-height: 1.65;
             max-width: 750px;
             margin: 0 auto 35px auto;
             color: #94a3b8;
@@ -97,6 +100,7 @@
         .btn {
             display: inline-block;
             padding: 12px 28px;
+            min-height: 48px;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
@@ -124,7 +128,7 @@
 
         /*div sect*/
         .divisions-section {
-            padding: 60px 0;
+            padding: 56px 0;
         }
         .section-title {
             text-align: center;
@@ -134,13 +138,15 @@
         }
         .divisions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: 25px;
         }
 
         /*menurutt simbah Gemini, */
         .div-card {
             display: block;
+            min-width: 0;
+            overflow-wrap: anywhere;
             background-color: #1e293b;
             border: 1px solid #334155;
             padding: 30px;
@@ -171,6 +177,7 @@
         .div-card p {
             color: #94a3b8;
             font-size: 0.95rem;
+            line-height: 1.65;
         }
 
         /* footer setts atau apalah menurut yutub */
@@ -215,17 +222,35 @@
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 2.3rem; }
+            .hero { padding: 64px 0 48px; }
+            .hero h1 { font-size: 2.1rem; }
+            .hero p { font-size: 1.05rem; }
+            .divisions-section { padding: 44px 0; }
+            .section-title { font-size: 1.75rem; margin-bottom: 28px; }
+            .divisions-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+            .div-card { padding: 24px; }
             .hero-actions {
                 flex-direction: column;
                 align-items: center;
-                gap: 14px;
+                gap: 12px;
             }
             .hero-actions .btn {
                 width: min(100%, 320px);
                 text-align: center;
             }
+            footer { margin-top: 48px; padding-top: 32px; }
             .footer-content { flex-direction: column; text-align: center; }
+        }
+        @media (max-width: 420px) {
+            .hero { padding: 52px 0 40px; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
+            .hashtag { font-size: 0.8rem; }
+            .section-title { font-size: 1.5rem; }
+            .div-card { padding: 20px; }
+            .div-card h3 { font-size: 1.25rem; }
+            .div-card p { font-size: 0.9rem; }
+            .hero-actions .btn { padding: 12px 18px; }
         }
     </style>
 </head>
@@ -236,7 +261,7 @@
         <div class="container">
             <nav>
                 <div class="logo-area">
-                    <div class="logo-text">ADMINSMAGA</div>
+                    <img class="logo-image" src="images/LogoAdminRealNoFekFek100Persen.jpg" alt="Administrator SMAGA" onerror="this.style.display='none'">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Beranda</a></li>
@@ -261,24 +286,24 @@
     </section>
 
     <!-- Divisi Section -->
-    <section class="container id="divisi"">
+    <section class="container" id="divisi">
         <div class="divisions-section">
             <h2 class="section-title">Bidang Divisi Kami</h2>
             <div class="divisions-grid">
                 <!--div 1-->
-                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Jurnalistik, ganti HTTPS HOLDER dengan tautan tujuan">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="LinkJurnalittingFireShiiKloakuudahmut">
                     <span class="div-icon">🔥✍️</span>
                     <h3>Jurnalistik</h3>
                     <p>Fokus pada peliputan berita sekolah, dokumentasi acara, fotografi, videografi, serta penyusunan artikel informatif seputar kegiatan civitas akademika SMAN 3 Surakarta.</p>
                 </a>
                 <!-- div2 -->
-                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Programming, ganti HTTPS HOLDER dengan tautan tujuan">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="LinkPGKloakuudahmut">
                     <span class="div-icon">💻💥</span>
                     <h3>Programming</h3>
                     <p>Mengembangkan serta mengelola website resmi, sistem informasi internal sekolah, dan mengeksplorasi logika coding serta pemecahan masalah berbasis teknologi digital.</p>
                 </a>
                 
-                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="Desain Grafis, ganti HTTPS HOLDER dengan tautan tujuan">
+                <a class="div-card" href="HTTPS HOLDER" onclick="return false;" aria-label="LinkDGKloakuudahmut">
                     <span class="div-icon">🎨🖌️</span>
                     <h3>Desain Grafis</h3>
                     <p>Merancang identitas visual kreatif, layout majalah/buletin, poster digital, serta kebutuhan aset visual media sosial untuk menjaga estetika branding sekolah tetap modern.</p>
